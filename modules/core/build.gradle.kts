@@ -1,5 +1,5 @@
 plugins {
-    id("neotamia-build")
+    id("minecraftbot-build")
 }
 
 extra["localJarRepo"] = true

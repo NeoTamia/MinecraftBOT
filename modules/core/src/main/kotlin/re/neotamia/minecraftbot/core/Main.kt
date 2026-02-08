@@ -1,4 +1,4 @@
-package re.neotamia.kotlintemplate.core
+package re.neotamia.minecraftbot.core
 
 fun main() {
     println("Hello, World!")

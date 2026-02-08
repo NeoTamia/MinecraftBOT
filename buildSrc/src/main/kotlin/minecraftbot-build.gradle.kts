@@ -14,7 +14,7 @@ plugins {
     id("com.diffplug.spotless")
 }
 
-val baseGroup = "re.neotamia.kotlintemplate"
+val baseGroup = "re.neotamia.minecraftbot"
 group = when {
     project.path.startsWith(":modules:core") -> "$baseGroup.core"
     else -> baseGroup
@@ -22,7 +22,7 @@ group = when {
 version = findProperty("version")!!
 
 val moduleName = project.path.removePrefix(":modules").replace(":", "-")
-val baseName = if (moduleName == "-" || moduleName.isEmpty()) "kotlin-template" else "kotlin-template$moduleName"
+val baseName = if (moduleName == "-" || moduleName.isEmpty()) "MinecraftBOT" else "MinecraftBOT$moduleName"
 base {
     archivesName.set(baseName)
 }
@@ -164,9 +164,9 @@ project.afterEvaluate {
                     val kebabName = baseName.replace(Regex("(?<=[a-z])(?=[A-Z])"), "-").lowercase()
                     artifactId = kebabName
                     pom {
-                        name = "KotlinTemplate ${project.name}"
-                        description = "Kotlin Template, ${project.name} module."
-                        url = "https://github.com/NeoTamia/kotlin-template"
+                        name = "MinecraftBOT ${project.name}"
+                        description = "MinecraftBOT, ${project.name} module."
+                        url = "https://github.com/NeoTamia/MinecraftBOT"
                         developers {
                             developer {
                                 id = "NeoTamia"
@@ -174,9 +174,9 @@ project.afterEvaluate {
                             }
                         }
                         scm {
-                            connection = "scm:git:https://github.com/NeoTamia/kotlin-template.git"
-                            developerConnection = "scm:git:ssh://git@github.com:NeoTamia/kotlin-template.git"
-                            url = "https://github.com/NeoTamia/kotlin-template"
+                            connection = "scm:git:https://github.com/NeoTamia/MinecraftBOT.git"
+                            developerConnection = "scm:git:ssh://git@github.com:NeoTamia/MinecraftBOT.git"
+                            url = "https://github.com/NeoTamia/MinecraftBOT"
                         }
                     }
                     // javadoc & sources jars already added with `components["java"]`
