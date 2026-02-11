@@ -46,6 +46,14 @@ repositories {
         name = "neotamiaPrivate"
         url = uri("https://repo.neotamia.re/private")
     }
+    maven {
+        name = "opencollab-releases"
+        url = uri("https://repo.opencollab.dev/maven-releases/")
+    }
+    maven {
+        name = "opencollab-snapshots"
+        url = uri("https://repo.opencollab.dev/maven-snapshots/")
+    }
 }
 
 dependencies {
